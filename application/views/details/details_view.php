@@ -13,15 +13,25 @@
 
 
            <!-- facebook share -->
+
+       <!--   <div class="fb-share-button" data-href="<?php echo base_url().$uri?>" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblok.epizy.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div>
+           -->
+           <!-- end facebook -->
+
+           <!-- Whatsapp Share -->
+          <!--  <a href="whatsapp://send?text=<?php echo base_url().$uri?>">Bagikan ke WhatsApp</a> -->
+           <!-- end Whatsapp share -->
+
+
+            <!-- facebook share -->
             <div data-href="<?php echo base_url().$uri?>" data-size="small" style="display: inline;"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpastorroisipahelut.com%2F<?=$uri?>&amp;src=sdkpreparse" style="color: blue; display: inline;"><i class="fab fa-facebook-square fa-3x"></i></a></div>
             <!-- end facebook -->
              <!-- Whatsapp Share -->
              <a href="whatsapp://send?text=<?php echo base_url().$uri?>" style="color: green; display: inline;"><i class="fab fa-whatsapp-square fa-3x"></i></a>
              <!-- end Whatsapp share -->
-            <!-- twitter Share -->
+             <!-- twitter Share -->
              <a href="https://twitter.com/intent/tweet?url=<?= base_url().$uri;?>" style="color: blue; display: inline;"><i class="fab fa-twitter-square fa-3x"></i></a>
              <!-- end Twitter Share -->
-
 
 
 

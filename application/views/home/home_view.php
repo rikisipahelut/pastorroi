@@ -7,7 +7,7 @@
             <h1 class="display-9 font-italic"><small><?php echo $konten[0]['sub_judul'];?></small></h1>
             <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p> -->
             <p class="lead my-3"><?php echo word_limiter($konten[0]['isi'],40);?></p>
-            <p class="lead mb-0"><a href="<?php echo base_url()?>details/index/<?php echo $konten[0]['id']?>/<?php echo $konten[0]['judul'];?>" class="text-white font-weight-bold">Continue reading...</a></p>
+            <p class="lead mb-0"><a href="<?php echo base_url()?>details/index/<?php echo $konten[0]['id']?>/<?php echo empty($konten[0]['slug']) ? "artikel" : $konten[0]['slug'] ;?>" class="text-white font-weight-bold">Continue reading...</a></p>
           </div>
           <div class="col-md">
             <img class="card-img flex-auto d-none d-md-block img-responsive" src="<?= base_url();?>asset/img/tumb/<?= $konten[0]['gambar'];?>" alt="Card image cap">
@@ -60,8 +60,9 @@
 
             <p><?php echo nl2br($konten[1]['isi']); ?></p>
            
-           
-        <!-- facebook share -->
+         
+        
+            <!-- facebook share -->
             <div data-href="<?php echo base_url().$uri?>" data-size="small" style="display: inline;"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpastorroisipahelut.com%2F<?=$uri?>&amp;src=sdkpreparse" style="color: blue; display: inline;"><i class="fab fa-facebook-square fa-3x"></i></a></div>
             <!-- end facebook -->
              <!-- Whatsapp Share -->
@@ -70,6 +71,8 @@
             <!-- twitter Share -->
              <a href="https://twitter.com/intent/tweet?url=<?= base_url().$uri;?>" style="color: blue; display: inline;"><i class="fab fa-twitter-square fa-3x"></i></a>
              <!-- end Twitter Share -->
+       
+
           </div><!-- /.blog-post -->
 
           <!-- =====================Card Deks========================= -->
@@ -80,7 +83,7 @@
               <img src="<?= base_url();?>asset/img/tumb/<?= $konten[2]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[2]['id']?>/<?php echo $konten[2]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[2]['id']?>/<?php echo empty($konten[2]['slug']) ? "artikel" : $konten[2]['slug'] ;?>" class="text-dark">
                   <?php if (empty($konten[2]['judul'])){
                             echo "Card Title";
                         }else echo $konten[2]['judul'];
@@ -101,7 +104,7 @@
             <div class="card">
               <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[3]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
-                <a href="<?php echo base_url()?>details/index/<?php echo $konten[3]['id']?>/<?php echo $konten[3]['judul'];?>" class="text-dark">
+                <a href="<?php echo base_url()?>details/index/<?php echo $konten[3]['id']?>/<?php echo empty($konten[3]['slug']) ? "artikel" : $konten[3]['slug'] ;?>" class="text-dark">
                 <h5 class="card-title">
                   <?php if (empty($konten[3]['judul'])){
                             echo "Card Title";
@@ -121,7 +124,7 @@
             <div class="card">
               <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[4]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
-                <a href="<?php echo base_url()?>details/index/<?php echo $konten[4]['id']?>/<?php echo $konten[4]['judul'];?>" class="text-dark">
+                <a href="<?php echo base_url()?>details/index/<?php echo $konten[4]['id']?>/<?php echo empty($konten[4]['slug']) ? "artikel" : $konten[4]['slug'] ;?>" class="text-dark">
                 <h5 class="card-title">
                   <?php if (empty($konten[4]['judul'])){
                             echo "Card Title";
@@ -144,7 +147,7 @@
             <div class="card">
               <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[5]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
-                <a href="<?php echo base_url()?>details/index/<?php echo $konten[5]['id']?>/<?php echo $konten[5]['judul'];?>" class="text-dark">
+                <a href="<?php echo base_url()?>details/index/<?php echo $konten[5]['id']?>/<?php echo empty($konten[5]['slug']) ? "artikel" : $konten[5]['slug'] ;?>" class="text-dark">
                  <h5 class="card-title">
                   <?php if (empty($konten[5]['judul'])){
                             echo "Card Title";
@@ -164,7 +167,7 @@
             <div class="card">
               <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[6]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
-                <a href="<?php echo base_url()?>details/index/<?php echo $konten[6]['id']?>/<?php echo $konten[6]['judul'];?>" class="text-dark">
+                <a href="<?php echo base_url()?>details/index/<?php echo $konten[6]['id']?>/<?php echo empty($konten[6]['slug']) ? "artikel" : $konten[6]['slug'] ;?>" class="text-dark">
                  <h5 class="card-title">
                   <?php if (empty($konten[6]['judul'])){
                             echo "Card Title";
@@ -185,7 +188,7 @@
             <div class="card">
               <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[7]['gambar'];?>" class="card-img-top" alt="..." height="162px">
               <div class="card-body">
-              <a href="<?php echo base_url()?>details/index/<?php echo $konten[7]['id']?>/<?php echo $konten[7]['judul'];?>" class="text-dark">
+              <a href="<?php echo base_url()?>details/index/<?php echo $konten[7]['id']?>/<?php echo empty($konten[7]['slug']) ? "artikel" : $konten[7]['slug'] ;?>" class="text-dark">
                <h5 class="card-title">
                   <?php if (empty($konten[7]['judul'])){
                             echo "Card Title";
@@ -209,7 +212,7 @@
               <li class="media">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[8]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[8]['id']?>/<?php echo $konten[8]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[8]['id']?>/<?php echo empty($konten[8]['slug']) ? "artikel" : $konten[8]['slug'] ;?>" class="text-dark">
                     <h5 class="mt-0 mb-1"> <?php if (empty($konten[8]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[8]['judul'];
@@ -224,7 +227,7 @@
               <li class="media my-4">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[9]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[9]['id']?>/<?php echo $konten[9]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[9]['id']?>/<?php echo empty($konten[9]['slug']) ? "artikel" : $konten[9]['slug'] ;?>" class="text-dark">
                      <h5 class="mt-0 mb-1"> <?php if (empty($konten[9]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[9]['judul'];
@@ -239,7 +242,7 @@
               <li class="media">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[10]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[10]['id']?>/<?php echo $konten[10]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[10]['id']?>/<?php echo empty($konten[10]['slug']) ? "artikel" : $konten[10]['slug'] ;?>" class="text-dark">
                      <h5 class="mt-0 mb-1"> <?php if (empty($konten[10]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[10]['judul'];
@@ -257,7 +260,7 @@
               <li class="media">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[11]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[11]['id']?>/<?php echo $konten[11]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[11]['id']?>/<?php echo empty($konten[11]['slug']) ? "artikel" : $konten[11]['slug'] ;?>" class="text-dark">
                       <h5 class="mt-0 mb-1"> <?php if (empty($konten[11]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[11]['judul'];
@@ -272,7 +275,7 @@
               <li class="media my-4">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[12]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[12]['id']?>/<?php echo $konten[12]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[12]['id']?>/<?php echo empty($konten[12]['slug']) ? "artikel" : $konten[12]['slug'] ;?>" class="text-dark">
                       <h5 class="mt-0 mb-1"> <?php if (empty($konten[12]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[12]['judul'];
@@ -288,7 +291,7 @@
               <li class="media">
                 <img src="<?= base_url();?>asset/img/tumb/<?php echo $konten[13]['gambar'];?>" class="mr-3" alt="..." height="50px">
                 <div class="media-body">
-                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[13]['id']?>/<?php echo $konten[13]['judul'];?>" class="text-dark">
+                  <a href="<?php echo base_url()?>details/index/<?php echo $konten[13]['id']?>/<?php echo empty($konten[13]['slug']) ? "artikel" : $konten[13]['slug'] ;?>" class="text-dark">
                     <h5 class="mt-0 mb-1"> <?php if (empty($konten[13]['judul'])){
                               echo "List-based media object";
                           }else echo $konten[13]['judul'];

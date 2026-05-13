@@ -7,8 +7,12 @@ class Details_pastor_prespective extends CI_Controller
 {
 	
 	public function index($id,$uri)
-	{   $data['prespective'] = $this->Konten_model->getByIdPres($id);
-		$data['judul'] = 'Pastor Perspective '.$data['prespective']['judul_status'];
+	{  
+		if ($this->input->post('keyword')) {
+			$data["cari"] = $this->Konten_model->cari_artikel();
+		}
+		$data['prespective'] = $this->Konten_model->getByIdPres($id);
+		$data['judul'] = 'Pastor Perspective : '.$data['prespective']['judul_status'];
 		$data['isi'] = $data['prespective']['status'];
 		$data['gambar'] = $data['prespective']['gambar'];
 		$data["about"] = $this->Konten_model->getByIdAbout(2);

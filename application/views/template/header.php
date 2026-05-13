@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="keywords" content="<?php 
+      if (isset($keywords)) {
+        echo $keywords;
+      }else{
+        echo '';
+      }
+     ?>">
+    <meta name="application-name" content="<?php 
+      if (isset($app_name)) {
+        echo $app_name;
+      }else{
+        echo '';
+      }
+     ?>">
     
     <!-- Facebook Developer -->
     <!-- You can use Open Graph tags to customize link previews.
@@ -75,7 +89,7 @@
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
           <a class="p-2 text-muted" href="<?php echo base_url();?>home">Home</a>
-          <a class="p-2 text-muted" href="<?php echo base_url();?>pastor_prespective">Pastor Prespective</a>
+          <a class="p-2 text-muted" href="<?php echo base_url();?>pastor_prespective">Pastor Perspective</a>
           <a class="p-2 text-muted" href="<?php echo base_url();?>vid_pengajaran">Vidio Pengajaran</a>
           <a class="p-2 text-muted" href="<?php echo base_url();?>mp3_pengajaran">Mp3 Pengajaran</a>
           <a class="p-2 text-muted" href="<?php echo base_url();?>koleksi_buku">Koleksi Buku</a>
@@ -83,7 +97,8 @@
           <a class="p-2 text-muted" href="<?php echo base_url();?>panti_asuhan">Panti Asuhan</a>
           <form class="form-inline" method="post">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" id="tombol-cari">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" id="tombol-cari">Telusur</button>
+                <!--  -->
           </form>
         </nav>
 

@@ -113,7 +113,7 @@
             </a>
           </div>
           <button type="button" class="btn btn-primary btn-lg btn-block">
-            Visitor <span class="badge badge-light"><?= $visitor['hari'];?></span>
+            Visitor <span class="badge badge-light"><?= $visitor['hari'] ?? "";?></span>
             <span class="sr-only">unread messages</span>
           </button>
 

@@ -4,14 +4,17 @@
 
 <!-- Bagian Footer -->
     <footer class="blog-footer">
-     <p>galatia 4 : 6</p>
+     <p>Galatia 4 : 6</p>
       <p>"Apakah dengan mengatakan kebenaran padamu aku menjadi musuhmu"</p>
-       <p><small>Copyright 2019</small><a href="#"></a><a href="#"></a></p>
+       <p><small>Copyright <?= date("Y");?></small><a href="#"></a><a href="#"></a></p>
       <p>
         <a href="#">Back to top</a>
       </p>
     </footer>
-
+    <!-- facebook Js -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v4.0"></script>
+    <!-- end facebook Js -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -27,8 +30,7 @@
         text: 'Thumbnail'
       });
     </script>
-    <!-- =================================================================== -->
-   
+    
   
   </body>
 </html>
