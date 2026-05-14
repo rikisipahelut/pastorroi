@@ -42,12 +42,14 @@
 			    <input type="text" name="sub_judul" class="form-control" id="subJudul" placeholder="Optional" value="<?php echo $artikel['sub_judul'];?>">
 			  </div>
 
-			  <div class="input-group">
+			  <!-- <div class="input-group">
 				  <div class="input-group-prepend">
 				    <span class="input-group-text">Isi Artikel</span>
 				  </div>
-				  <textarea class="form-control" name="isi" aria-label="With textarea" rows="10"><?php echo $artikel['isi']; ?></textarea>
-			  </div>
+				  <textarea class="form-control" name="isi" aria-label="With textarea" rows="10">
+            <?php echo $artikel['isi']; ?></textarea>
+			  </div> -->
+         <textarea id="summernote" name="isi"><?php echo $artikel['isi']; ?></textarea>
         <small class="form-text text-danger"><?= form_error('isi');?></small>
 
 			  <div class="form-group">
