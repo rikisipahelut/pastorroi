@@ -23,29 +23,26 @@
 
    </div>
    <!-- =========== youtube =================== -->
-   <div class="p-3 text-center">
-     <i><small class="text-muted"><?php echo $vidio[0]['tanggal']; ?></small></i>
-     <div class="embed-responsive embed-responsive-16by9">
 
-       <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QnqlVe5VJE8" allowfullscreen></iframe> -->
-       <!-- <?php echo htmlspecialchars_decode($vidio[0]['embed']); ?> -->
-     </div>
-     <!--  <iframe width="853" height="480" src="https://www.youtube.com/embed/QnqlVe5VJE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+   <div class="embed-responsive embed-responsive-16by9">
+     <iframe
+       class="embed-responsive-item"
+       src="<?= $vidio[0]['embed']; ?>"
+       allowfullscreen>
+     </iframe>
    </div>
    <!-- =========== End Youtube ===================================== -->
-
-   <!-- =========== Anchor ( podcash ) ===================================== -->
-   <div class="p-3 text-center">
-     <i><small class="text-muted"><?php echo $mp3[0]['tanggal']; ?></small></i>
-     <div class="embed-responsive embed-responsive-16by9">
-       <!--  <iframe src="https://anchor.fm/Pselroisipahelut/embed/episodes/RENCANA-JAHAT-YANG-DIGAGALKAN-ALALH-e529mn/a-ale2na" height="102px" width="400px" frameborder="0" scrolling="no"></iframe> -->
-
-       <?php echo htmlspecialchars_decode($mp3[0]['embed']); ?>
-
-
-     </div>
+   <!-- Spotify -->
+   <div class="embed-responsive embed-responsive-16by9 mt-4">
+     <iframe
+       class="embed-responsive-item"
+       src="<?= $mp3[0]['embed']; ?>"
+       frameborder="0"
+       allowfullscreen
+       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+     </iframe>
    </div>
-   <!-- ============ End Achor =================== -->
+
 
    <div class="p-3">
      <h4 class="font-italic">Archive</h4>
