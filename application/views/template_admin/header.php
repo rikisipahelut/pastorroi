@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="<?php echo base_url();?>asset/admin_lte/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url();?>asset/admin_lte/plugins/summernote/summernote-bs4.css">
+  <!-- Summernote -->
+  <script src="<?php echo base_url();?>asset/admin_lte/plugins/summernote/summernote-bs4.min.js"></script>
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>

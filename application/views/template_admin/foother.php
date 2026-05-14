@@ -55,5 +55,13 @@
 <script src="<?php echo base_url();?>asset/admin_lte/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>asset/admin_lte/dist/js/demo.js"></script>
+
+<script>
+  $(function () {
+    $('#summernote').summernote({
+      height: 300
+    });
+  });
+</script>
 </body>
 </html>
